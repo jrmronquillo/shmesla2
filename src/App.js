@@ -1,25 +1,65 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Title from './Components/Title';
+import Navbar from './Components/Navbar';
+import Infobar from './Components/Infobar';
+import Downarrow from './Components/Downarrow';
+import Sidemenu from './Components/Sidemenu';
+import Backdrop from './Components/Backdrop';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      shouldScroll : false,
+      sideMenuDisplay: false,
+    };
+
+  this.triggerNumScroll = this.triggerNumScroll.bind(this);
+  this.sideMenuToggle = this.sideMenuToggle.bind(this);
+  this.sideMenuClose = this.sideMenuClose.bind(this);
+
+  }
+
+  triggerNumScroll(){
+    console.log('triggerNumScroll executed');
+    this.setState({
+      shouldScroll: true,
+    })
+  }
+
+  sideMenuClose(){
+    console.log('sideMenuClose triggered!');
+    this.setState({
+      sideMenuDisplay: false,
+    })
+  }
+
+  sideMenuToggle(){
+    console.log('sideMenuToggle triggered!');
+    this.setState({
+      sideMenuDisplay: !this.state.sideMenuDisplay,
+    })
+  }
+
+
   render() {
     return (
       <div className="App">
+
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
+          <Navbar sideMenuToggle={this.sideMenuToggle} sideMenuDisplay={this.state.sideMenuDisplay} />
+          <Sidemenu sideMenuDisplay={this.state.sideMenuDisplay} sideMenuClose={this.sideMenuClose}  />
+          <Title />
+          <span className="text-main-subtitle">Model A</span>
+          <Infobar handleClick={this.triggerNumScroll} />
+          <Downarrow />
+          <Backdrop sideMenuToggle={this.sideMenuToggle} sideMenuDisplay={this.state.sideMenuDisplay} />
+
         </header>
+
       </div>
     );
   }
