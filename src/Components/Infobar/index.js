@@ -31,7 +31,7 @@ class Infobar extends Component {
             <span> AWD </span>
           </div>
           <div id="info-text-4" className=" border-left col-sm-2 info-text-animate">
-            <a href="#" className="btn btn-outline-light oval-outline"> Order Now </a>
+            <a href="http://google.com" className="btn btn-outline-light oval-outline"> Order Now </a>
           </div>
         </div>
       </div>

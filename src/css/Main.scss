@@ -1,4 +1,41 @@
-/*Watch Test 1*/
+
+/*
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+section {
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+}
+h1  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 0;
+    font-size: calc(1rem + 3vw);
+}
+*/
+
+/* make overflow hidden so that user cannot scroll outside of html body*/
+html, body{
+  overflow: hidden;
+}
+
+
 
 $animate-duration: .5s;
 $animate-duration2: .3s;
@@ -23,6 +60,7 @@ $animate-duration2: .3s;
 
 .App {
   text-align: center;
+  /*scroll-snap-type: y mandatory;*/
 }
 
 .App-test{
@@ -36,8 +74,10 @@ $animate-duration2: .3s;
 }
 
 .App-header {
+  /*scroll-snap-align: start;8/
+  /*scroll-snap-stop: always;*/
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /*align-items: center;*/
@@ -116,6 +156,11 @@ $animate-duration2: .3s;
   transition: 0.7s;
 }
 
+.container-sideNav-tab{
+  display: inline;
+
+}
+
 #digit1, #digit2{
   position:relative;
 }
@@ -180,10 +225,74 @@ $animate-duration2: .3s;
   padding: 0 20px 0 20px;
 }
 
+#sideNav-index{
+  position: fixed;
+  left: 1%;
+  top: 25%;
+  width: 10%;
+  color: #FFF;
+}
+
+.sideNav-link{
+  text-decoration: none;
+  color: white !important;
+}
+
+.sideNav-link:hover{
+  text-decoration: none;
+  color: white !important;
+}
+
+.sideNav-tab{
+  position: relative;
+  width: 1px;
+  height: 1em;
+  background-color: white;
+  margin: 2px;
+
+}
+
+.sideNav-tab-active{
+  position: relative;
+  width: 3px;
+  height: 1em;
+  background-color: white;
+}
+
+.sideNav-text{
+  margin-left: 1em;
+  opacity: 0;
+}
+
+.sideNav-text-quickShow{
+  margin-left: 1em;
+  opacity: 0;
+  animation: quickShow 3s;
+}
+
+
+.sideNav-text:hover{
+  text-decoration: none;
+  margin-left: 1em;
+  opacity: 1;
+  color: white !important;
+}
+
+.sideNav-tab-color{
+  background-color: #282c39; 
+}
+
 .oval-outline{
   border-radius: 25px;
 }
 
+#section1{
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c39;
+  /*scroll-snap-align: start;
+  scroll-snap-stop: always;*/
+}
 .text-main-title{
   position: relative;
   margin-top: 20vh;
@@ -196,6 +305,41 @@ $animate-duration2: .3s;
   animation: fadein-slideup .5s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+}
+
+.text-main-subtitle-clear{
+  opacity: 1;
+  font-size: 2em;
+}
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+@-webkit-keyframes quickShow {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes quickShow {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes spinit {

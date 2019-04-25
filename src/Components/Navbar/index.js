@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <div className="container-navbar" >
         <nav className="navbar navbar-expand-lg navbar-light">
-          <a className="navbar-brand font-white" href="#">SHMESLA</a>
+          <a className="navbar-brand font-white" href="http://google.com">SHMESLA</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -14,16 +14,16 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <a className="nav-link font-white font-navbar" href="#">Tool A</a>
+                <a className="nav-link font-white font-navbar" href="http://google.com">Tool A</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link font-white font-navbar" href="#">Tool B</a>
+                <a className="nav-link font-white font-navbar" href="http://google.com">Tool B</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link font-white font-navbar" href="#">Tool C</a>
+                <a className="nav-link font-white font-navbar" href="http://google.com">Tool C</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link font-white font-navbar" href="#">Tool D</a>
+                <a className="nav-link font-white font-navbar" href="http://google.com">Tool D</a>
               </li>
             </ul>
             <span className="icons-test" onClick={this.props.sideMenuToggle}>

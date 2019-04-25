@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  scroll-snap-tye: y mandatory;
 }
 
 .App-test{
@@ -23,6 +24,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#test{
+  display: none;
 }
 
 .App-link {
