@@ -1,4 +1,4 @@
-
+/*test */
 /*
 * {
     box-sizing: border-box;
@@ -61,6 +61,7 @@ $animate-duration2: .3s;
 .App {
   text-align: center;
   /*scroll-snap-type: y mandatory;*/
+
 }
 
 .App-test{
@@ -76,7 +77,14 @@ $animate-duration2: .3s;
 .App-header {
   /*scroll-snap-align: start;8/
   /*scroll-snap-stop: always;*/
-  background-color: #282c34;
+
+  /*background-color: #282c34;*/
+  background-image: url('../Images/Shmesla.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -122,7 +130,7 @@ $animate-duration2: .3s;
 
 .container-infobar{
   position: relative;
-  margin-top: 20%;
+  margin-top: 35%;
 }
 
 .container-navbar{
@@ -279,7 +287,8 @@ $animate-duration2: .3s;
 }
 
 .sideNav-tab-color{
-  background-color: #282c39; 
+  /*background-color: #282c39;*/
+  background-color: transparent; 
 }
 
 .oval-outline{
@@ -295,7 +304,7 @@ $animate-duration2: .3s;
 }
 .text-main-title{
   position: relative;
-  margin-top: 20vh;
+  margin-top: 12vh;
   animation: fadein-slideup .5s;
 }
 

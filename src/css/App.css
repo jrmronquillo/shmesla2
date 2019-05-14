@@ -1,3 +1,4 @@
+/*test */
 /*
 * {
     box-sizing: border-box;
@@ -69,7 +70,11 @@ html, body {
 .App-header {
   /*scroll-snap-align: start;8/
   /*scroll-snap-stop: always;*/
-  background-color: #282c34;
+  /*background-color: #282c34;*/
+  background-image: url("../Images/Shmesla.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -114,7 +119,7 @@ html, body {
 
 .container-infobar {
   position: relative;
-  margin-top: 20%;
+  margin-top: 35%;
 }
 
 .container-navbar {
@@ -261,7 +266,8 @@ html, body {
 }
 
 .sideNav-tab-color {
-  background-color: #282c39;
+  /*background-color: #282c39;*/
+  background-color: transparent;
 }
 
 .oval-outline {
@@ -278,7 +284,7 @@ html, body {
 
 .text-main-title {
   position: relative;
-  margin-top: 20vh;
+  margin-top: 12vh;
   animation: fadein-slideup 0.5s;
 }
 

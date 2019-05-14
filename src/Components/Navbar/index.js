@@ -27,8 +27,8 @@ class Navbar extends Component {
               </li>
             </ul>
             <span className="icons-test" onClick={this.props.sideMenuToggle}>
-              {!this.props.sideMenuDisplay && <i class="fas fa-bars icon-color-white"></i>}
-              {this.props.sideMenuDisplay && <i class="fas fa-times icon-color-black"></i>}
+              {!this.props.sideMenuDisplay && <i className="fas fa-bars icon-color-white"></i>}
+              {this.props.sideMenuDisplay && <i className="fas fa-times icon-color-black"></i>}
             </span>
           </div>
         </nav>

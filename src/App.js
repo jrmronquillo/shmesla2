@@ -96,7 +96,7 @@ class App extends Component {
     console.log(this.state.currentSectionDisplayed);
     console.log('handleScroll triggered!');
     console.log(window.pageYOffset);
-    if (window.pageYOffset == document.getElementById('appHeader').offsetTop){
+    if (window.pageYOffset === document.getElementById('appHeader').offsetTop){
       this.setState({
         currentSectionDisplayed: '#appHeader',
       })
@@ -161,7 +161,7 @@ class App extends Component {
         </div>
         <div id="section1">
           <div className="section-header-text">
-            <span className="font-white"> Section 1 {this.state.currentSectionDisplayed}</span>
+            <span className="font-white"></span>
           </div>
         </div>
         <Sidenav scrollIntoViewTest={this.scrollIntoViewTest} currentSectionDisplayed={this.state.currentSectionDisplayed} />
